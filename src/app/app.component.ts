@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService, TableService, QuickToolbarService } from '@syncfusion/ej2-angular-richtexteditor';
-
-
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { RichTextEditorModule, ToolbarService, ImageService, LinkService, HtmlEditorService, TableService, QuickToolbarService } from '@syncfusion/ej2-angular-richtexteditor';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  standalone: true,
   providers: [ToolbarService, LinkService, ImageService, HtmlEditorService,TableService, QuickToolbarService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  imports: [RichTextEditorModule],
 })
 export class AppComponent {
   public value: string = `
